@@ -1,0 +1,37 @@
+.dis{
+    text-decoration: line-through;
+}
+.item-dis{
+    background-color: black;
+    color: white;
+}
+.item-li{
+    display: inline-block;
+    text-decoration: none;
+}
+.place{
+    width: 50%;
+    margin: 0%;
+    margin-left: 25%;
+}
+.item{
+    background-color:rgb(218, 218, 218);
+    /* margin: 10%; */
+    padding: 2%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.item-button{
+    /* display: inline-block; */
+    float: right;
+}
+.search-wrap{
+    margin: 0%;
+    margin-bottom: 10px;
+}
+.add-items-btn{
+    float: right;
+}
+.add-items-inp{
+    /* width: 90%; */
+}
