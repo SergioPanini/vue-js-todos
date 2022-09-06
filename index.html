@@ -10,22 +10,22 @@
     <body>
         <div id="app">
         <div class="place">
-            
-            <div class="add-items">
-                <form @submit.prevent="addItem">
+            <form class="add-items" @submit.prevent="addItem">
                 <input placeholder="add item" v-model="new_iten_value" class="add-items-inp">
                 <button class="add-items-btn">Add</button>
-                </form>
-            </div>
+            </form>
             <h1>Надо сделать</h1>
-            <div class="search-wrap">
-                <input placeholder="search" :value="search_text" @input="search_text = $event.target.value"/>
+            <div>
+                <div class="search-wrap">
+                    <input class="inp" placeholder="search" :value="search_text" @input="search_text = $event.target.value"/>
+                </div>
+                <div v-for="item in search_items" class="item" @click="check(item)">
+                    <div class="item-wrap">
+                        <li class="item-li"><span v-bind:class="{dis: item.status}">{{ item.text }}</span></li>
+                    <div class="item-button"><button @click="delItem(item)">X</button></div>
+                    </div>
+                </div>
             </div>
-            <div v-for="item in search_items" class="item" @click="check(item)">
-                <li class="item-li"><span v-bind:class="{dis: item.status}">{{ item.text }}</span></li>
-                <div class="item-button"><button @click="delItem(item)">X</button></div>
-            </div>
-            
         </div>
         </div>
 
